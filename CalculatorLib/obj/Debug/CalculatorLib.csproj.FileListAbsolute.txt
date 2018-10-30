@@ -1,0 +1,7 @@
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorLib\bin\Debug\CalculatorLib.dll.config
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorLib\bin\Debug\CalculatorLib.dll
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorLib\bin\Debug\CalculatorLib.pdb
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorLib\obj\Debug\CalculatorLib.csprojResolveAssemblyReference.cache
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorLib\obj\Debug\CalculatorLib.csproj.CoreCompileInputs.cache
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorLib\obj\Debug\CalculatorLib.dll
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorLib\obj\Debug\CalculatorLib.pdb

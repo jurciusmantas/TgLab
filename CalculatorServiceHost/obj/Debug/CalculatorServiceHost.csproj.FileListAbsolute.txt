@@ -1,0 +1,10 @@
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorServiceHost\bin\Debug\CalculatorServiceHost.exe.config
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorServiceHost\bin\Debug\CalculatorServiceHost.exe
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorServiceHost\bin\Debug\CalculatorServiceHost.pdb
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorServiceHost\bin\Debug\CalculatorLib.dll
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorServiceHost\bin\Debug\CalculatorLib.pdb
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorServiceHost\bin\Debug\CalculatorLib.dll.config
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorServiceHost\obj\Debug\CalculatorServiceHost.csprojResolveAssemblyReference.cache
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorServiceHost\obj\Debug\CalculatorServiceHost.csproj.CoreCompileInputs.cache
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorServiceHost\obj\Debug\CalculatorServiceHost.exe
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorServiceHost\obj\Debug\CalculatorServiceHost.pdb

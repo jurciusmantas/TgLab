@@ -1,0 +1,10 @@
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorUI\bin\Debug\CalculatorUI.exe.config
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorUI\bin\Debug\CalculatorUI.exe
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorUI\bin\Debug\CalculatorUI.pdb
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorUI\obj\Debug\CalculatorUI.csprojResolveAssemblyReference.cache
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorUI\obj\Debug\CalculatorUI.Form1.resources
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorUI\obj\Debug\CalculatorUI.Properties.Resources.resources
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorUI\obj\Debug\CalculatorUI.csproj.GenerateResource.Cache
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorUI\obj\Debug\CalculatorUI.csproj.CoreCompileInputs.cache
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorUI\obj\Debug\CalculatorUI.exe
+D:\VU\2 pusmetis\VisualProjects\TgLab\CalculatorUI\obj\Debug\CalculatorUI.pdb
