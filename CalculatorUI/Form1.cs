@@ -14,7 +14,9 @@ namespace CalculatorUI
     public partial class Form1 : Form
     {
         double n1, n2;
+        int numberPlaceAfterComma;
         bool containsOperationChar;
+        bool containsComma;
         CalculatorClient client;
         public Form1()
         {
@@ -25,42 +27,9 @@ namespace CalculatorUI
         {
             client = new CalculatorClient();
             containsOperationChar = false;
+            containsComma = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MainTB.Text += 1;
-            if (containsOperationChar)
-                n2 = n2 * 10 + 1;
-            else
-                n1 = n1 * 10 + 1;
-        }
-
-        private void button0_Click(object sender, EventArgs e)
-        {
-            if (containsOperationChar)
-            {
-                if (n2 != 0)
-                    MainTB.Text += 0;
-                n2 = n2 * 10;
-            }
-
-            else
-            {
-                if (n1 != 0)
-                    MainTB.Text += 0;
-                n1 = n1 * 10;
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MainTB.Text += 2;
-            if (containsOperationChar)
-                n2 = n2 * 10 + 2;
-            else
-                n1 = n1 * 10 + 2;
-        }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
@@ -68,67 +37,84 @@ namespace CalculatorUI
             containsOperationChar = true;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+        private void buttonSub_Click(object sender, EventArgs e)
         {
-            MainTB.Text += 3;
-            if (containsOperationChar)
-                n2 = n2 * 10 + 3;
-            else
-                n1 = n1 * 10 + 3;
+            MainTB.Text += " - ";
+            containsOperationChar = true;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonDivide_Click(object sender, EventArgs e)
         {
-            MainTB.Text += 4;
-            if (containsOperationChar)
-                n2 = n2 * 10 + 4;
-            else
-                n1 = n1 * 10 + 4;
+            MainTB.Text += " / ";
+            containsOperationChar = true;
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void buttonMul_Click(object sender, EventArgs e)
         {
-            MainTB.Text += 5;
-            if (containsOperationChar)
-                n2 = n2 * 10 + 5;
-            else
-                n1 = n1 * 10 + 5;
+            MainTB.Text += " * ";
+            containsOperationChar = true;
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void buttonPow_Click(object sender, EventArgs e)
         {
-            MainTB.Text += 6;
-            if (containsOperationChar)
-                n2 = n2 * 10 + 6;
-            else
-                n1 = n1 * 10 + 6;
+            MainTB.Text += " ^ ";
+            containsOperationChar = true;
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void buttonComma_Click(object sender, EventArgs e)
         {
-            MainTB.Text += 7;
-            if (containsOperationChar)
-                n2 = n2 * 10 + 7;
-            else
-                n1 = n1 * 10 + 7;
+            MainTB.Text += ",";
+            numberPlaceAfterComma = 1;
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void NumberButton_Click(object sender, EventArgs e)
         {
-            MainTB.Text += 8;
-            if (containsOperationChar)
-                n2 = n2 * 10 + 8;
+            int number;
+            if (sender == button0)
+                number = 0;
+            else if (sender == button1)
+                number = 1;
+            else if (sender == button2)
+                number = 2;
+            else if (sender == button3)
+                number = 3;
+            else if (sender == button4)
+                number = 4;
+            else if (sender == button5)
+                number = 5;
+            else if (sender == button6)
+                number = 6;
+            else if (sender == button7)
+                number = 7;
+            else if (sender == button8)
+                number = 8;
             else
-                n1 = n1 * 10 + 8;
-        }
+                number = 9;
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            MainTB.Text += 9;
-            if (containsOperationChar)
-                n2 = n2 * 10 + 9;
+            MainTB.Text += number;
+
+            if (!containsOperationChar)
+            {
+                if (containsComma)
+                {
+                    n1 += Math.Pow(0.1, numberPlaceAfterComma) * number;
+                    numberPlaceAfterComma++;
+                }
+                else
+                    n1 = n1 * 10 + number;
+            }
             else
-                n1 = n1 * 10 + 9;
+            {
+                if (containsComma)
+                {
+                    n2 += Math.Pow(0.1, numberPlaceAfterComma) * number;
+                    numberPlaceAfterComma++;
+                }
+                else
+                    n2 = n2 * 10 + number;
+            }
+
         }
 
         private void buttonAts_Click(object sender, EventArgs e)
@@ -149,6 +135,9 @@ namespace CalculatorUI
             n2 = 0;
             MainTB.Text = n1.ToString();
             containsOperationChar = false;
+            if (n1 == Math.Floor(n1))
+                containsComma = false;
+            
         }
     }
 }
