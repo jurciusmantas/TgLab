@@ -30,42 +30,14 @@ namespace CalculatorUI
             containsComma = false;
         }
 
-
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            MainTB.Text += " + ";
-            containsOperationChar = true;
-        }
-
-
-        private void buttonSub_Click(object sender, EventArgs e)
-        {
-            MainTB.Text += " - ";
-            containsOperationChar = true;
-        }
-
-        private void buttonDivide_Click(object sender, EventArgs e)
-        {
-            MainTB.Text += " / ";
-            containsOperationChar = true;
-        }
-
-        private void buttonMul_Click(object sender, EventArgs e)
-        {
-            MainTB.Text += " * ";
-            containsOperationChar = true;
-        }
-
-        private void buttonPow_Click(object sender, EventArgs e)
-        {
-            MainTB.Text += " ^ ";
-            containsOperationChar = true;
-        }
-
         private void buttonComma_Click(object sender, EventArgs e)
         {
-            MainTB.Text += ",";
-            numberPlaceAfterComma = 1;
+            if (!containsComma)
+            {
+                MainTB.Text += ",";
+                numberPlaceAfterComma = 1;
+                containsComma = true;
+            }
         }
 
         private void NumberButton_Click(object sender, EventArgs e)
@@ -117,6 +89,47 @@ namespace CalculatorUI
 
         }
 
+        private void OperationButton_Click(object sender, EventArgs e)
+        {
+            if (n2 == 0 && containsOperationChar)
+            {
+                if (containsComma)
+                    MainTB.Text = MainTB.Text.Substring(0, MainTB.Text.Length - 4);
+                else
+                    MainTB.Text = MainTB.Text.Substring(0, MainTB.Text.Length - 3);
+            }
+            else if (containsOperationChar)
+                buttonAts_Click(new Object(), new EventArgs());
+
+            if (sender == buttonAdd)
+                MainTB.Text += " + ";
+
+            else if (sender == buttonPow)
+                MainTB.Text += " ^ ";
+
+            else if (sender == buttonDivide)
+                MainTB.Text += " / ";
+
+            else if (sender == buttonSub)
+                MainTB.Text += " - ";
+
+            else if (sender == buttonMul)
+                MainTB.Text += " * ";
+
+            containsOperationChar = true;
+            containsComma = false;
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            MainTB.Text = "";
+            n1 = 0;
+            n2 = 0;
+            containsComma = false;
+            containsOperationChar = false;
+            numberPlaceAfterComma = 1;
+        }
+
         private void buttonAts_Click(object sender, EventArgs e)
         {
             if (MainTB.Text.Contains("+"))
@@ -131,13 +144,16 @@ namespace CalculatorUI
             else if (MainTB.Text.Contains("*"))
                 n1 = client.Multiply(n1, n2);
 
+            else if (MainTB.Text.Contains("^"))
+                n1 = client.Power(n1, n2);
+
 
             n2 = 0;
             MainTB.Text = n1.ToString();
             containsOperationChar = false;
-            if (n1 == Math.Floor(n1))
-                containsComma = false;
-            
+            if (n1 % 1 > 0)
+                containsComma = true;
+
         }
     }
 }

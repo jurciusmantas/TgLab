@@ -45,9 +45,8 @@
             this.buttonMul = new System.Windows.Forms.Button();
             this.buttonPow = new System.Windows.Forms.Button();
             this.buttonAts = new System.Windows.Forms.Button();
-            this.buttonOpenParenthesis = new System.Windows.Forms.Button();
-            this.buttonCloseParenthesis = new System.Windows.Forms.Button();
             this.buttonComma = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // MainTB
@@ -177,7 +176,7 @@
             this.buttonAdd.TabIndex = 11;
             this.buttonAdd.Text = "+";
             this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            this.buttonAdd.Click += new System.EventHandler(this.OperationButton_Click);
             // 
             // buttonSub
             // 
@@ -188,7 +187,7 @@
             this.buttonSub.TabIndex = 12;
             this.buttonSub.Text = "-";
             this.buttonSub.UseVisualStyleBackColor = true;
-            this.buttonSub.Click += new System.EventHandler(this.buttonSub_Click);
+            this.buttonSub.Click += new System.EventHandler(this.OperationButton_Click);
             // 
             // buttonDivide
             // 
@@ -199,7 +198,7 @@
             this.buttonDivide.TabIndex = 13;
             this.buttonDivide.Text = "/";
             this.buttonDivide.UseVisualStyleBackColor = true;
-            this.buttonDivide.Click += new System.EventHandler(this.buttonDivide_Click);
+            this.buttonDivide.Click += new System.EventHandler(this.OperationButton_Click);
             // 
             // buttonMul
             // 
@@ -210,7 +209,7 @@
             this.buttonMul.TabIndex = 14;
             this.buttonMul.Text = "*";
             this.buttonMul.UseVisualStyleBackColor = true;
-            this.buttonMul.Click += new System.EventHandler(this.buttonMul_Click);
+            this.buttonMul.Click += new System.EventHandler(this.OperationButton_Click);
             // 
             // buttonPow
             // 
@@ -221,7 +220,7 @@
             this.buttonPow.TabIndex = 15;
             this.buttonPow.Text = "^";
             this.buttonPow.UseVisualStyleBackColor = true;
-            this.buttonPow.Click += new System.EventHandler(this.buttonPow_Click);
+            this.buttonPow.Click += new System.EventHandler(this.OperationButton_Click);
             // 
             // buttonAts
             // 
@@ -234,26 +233,6 @@
             this.buttonAts.UseVisualStyleBackColor = true;
             this.buttonAts.Click += new System.EventHandler(this.buttonAts_Click);
             // 
-            // buttonOpenParenthesis
-            // 
-            this.buttonOpenParenthesis.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.buttonOpenParenthesis.Location = new System.Drawing.Point(326, 208);
-            this.buttonOpenParenthesis.Name = "buttonOpenParenthesis";
-            this.buttonOpenParenthesis.Size = new System.Drawing.Size(75, 75);
-            this.buttonOpenParenthesis.TabIndex = 17;
-            this.buttonOpenParenthesis.Text = "(";
-            this.buttonOpenParenthesis.UseVisualStyleBackColor = true;
-            // 
-            // buttonCloseParenthesis
-            // 
-            this.buttonCloseParenthesis.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.buttonCloseParenthesis.Location = new System.Drawing.Point(407, 208);
-            this.buttonCloseParenthesis.Name = "buttonCloseParenthesis";
-            this.buttonCloseParenthesis.Size = new System.Drawing.Size(75, 75);
-            this.buttonCloseParenthesis.TabIndex = 18;
-            this.buttonCloseParenthesis.Text = ")";
-            this.buttonCloseParenthesis.UseVisualStyleBackColor = true;
-            // 
             // buttonComma
             // 
             this.buttonComma.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
@@ -265,14 +244,24 @@
             this.buttonComma.UseVisualStyleBackColor = true;
             this.buttonComma.Click += new System.EventHandler(this.buttonComma_Click);
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonClear.Location = new System.Drawing.Point(326, 208);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(382, 75);
+            this.buttonClear.TabIndex = 20;
+            this.buttonClear.Text = "CLEAR";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 369);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonComma);
-            this.Controls.Add(this.buttonCloseParenthesis);
-            this.Controls.Add(this.buttonOpenParenthesis);
             this.Controls.Add(this.buttonAts);
             this.Controls.Add(this.buttonPow);
             this.Controls.Add(this.buttonMul);
@@ -317,9 +306,8 @@
         private System.Windows.Forms.Button buttonMul;
         private System.Windows.Forms.Button buttonPow;
         private System.Windows.Forms.Button buttonAts;
-        private System.Windows.Forms.Button buttonOpenParenthesis;
-        private System.Windows.Forms.Button buttonCloseParenthesis;
         private System.Windows.Forms.Button buttonComma;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
 
